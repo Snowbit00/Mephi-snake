@@ -63,6 +63,7 @@ class GameObject:
 
     def draw(self):
         """Отрисовать объект на экране.
+
         Абстрактный метод: переопределяется в дочерних классах.
         """
         raise NotImplementedError(
@@ -81,6 +82,7 @@ class Apple(GameObject):
     def __init__(self, position=SCREEN_CENTER, body_color=APPLE_COLOR,
                  occupied_positions=()):
         """Создать яблоко и сразу поставить его в случайную клетку.
+
         occupied_positions-клетки, куда яблоко ставить нельзя
         (например, занятые змейкой).
         """
@@ -160,7 +162,7 @@ class Snake(GameObject):
 
 def handle_keys(game_object):
     """Обработать события: закрытие окна, Esc и нажатия стрелок.
-    
+
     Разворот на 180 градусов запрещён:
     змейка не может сразу поползти назад.
     """
